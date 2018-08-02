@@ -23,6 +23,7 @@ def main():
     # remove pass and start your code here
     stri = input()
     length = len(stri)
+    outputstri = ""
     for i in range(length):
         substri = ""
         tem = stri[i]

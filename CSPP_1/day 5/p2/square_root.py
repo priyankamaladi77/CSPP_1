@@ -27,6 +27,6 @@ def main():
     if abs(ans**2 - val) >= epsilon:
         print("failed on square root of", val)
     else:
-        print(ans, 'is close square root of', val)
+        print(ans)
 if __name__ == "__main__":
     main()

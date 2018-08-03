@@ -20,9 +20,9 @@ def main():
     while ans**3 < cube:
         ans += 1
     if ans**3 != cube:
-        print("is not a perfect cube")
+        print(cube,"is not a perfect cube")
     else:
-        print("is a perfect cube")
+        print(cube,"is a perfect cube")
 
 if __name__ == "__main__":
     main()

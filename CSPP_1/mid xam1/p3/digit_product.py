@@ -9,12 +9,12 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
-    sum1 = 1
+    temp = 1
     while int_input > 0:
         rem = int_input%10
-        sum1 = sum1*rem
+        temp = rem*temp
         int_input = int_input//10
-    print(sum1)
+    print(temp)
 
 
 if __name__ == "__main__":

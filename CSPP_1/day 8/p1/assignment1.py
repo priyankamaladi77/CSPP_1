@@ -13,9 +13,8 @@ def factorial(ans):
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if ans == 1:
+    if ans == 0:
         return 1
-
     return ans * factorial(ans-1)
 
 

@@ -14,7 +14,7 @@ def factorial(ans):
     '''
     # Your code here
     if ans == 1:
-        return ans
+        return 1
 
     return ans * factorial(ans-1)
 

@@ -54,8 +54,14 @@
 
 
 
-def payingDebtOffInAYear(balance, annualinterestrate):
+def payingDebtOffInAYear(balance, annual_interest_rate):
     '''balance3'''
+    monthly_interest = (annual_interest_rate) / 12.0
+    monthly_payment_low = balance / 12
+    monthly_payment_high = (balance * (1 * monthly_interest) ** 12) / 12.0
+    prebal = balance 
+    epsilon = 0.0001
+    
 
 
 def main():

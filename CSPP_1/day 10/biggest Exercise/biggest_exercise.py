@@ -20,7 +20,7 @@ def biggest(a_dict):
         if len(a_dict[i_1]) > result:
             result = len(a_dict[i_1])
             max_str += i_1
-        return max_str[-1]
+    return max_str[-1]
 def main():
     '''main'''
     num = input()

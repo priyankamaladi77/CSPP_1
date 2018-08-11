@@ -54,14 +54,29 @@
 
 
 
-def payingDebtOffInAYear(balance, annual_interest_rate):
+def payingdebtoffinayear(balance, annual_interest_rate):
     '''balance3'''
     monthly_interest = (annual_interest_rate) / 12.0
     monthly_payment_low = balance / 12
-    monthly_payment_high = (balance * (1 * monthly_interest) ** 12) / 12.0
-    prebal = balance 
-    epsilon = 0.0001
-    
+    monthly_payment_high = (balance * (1 + monthly_interest) ** 12) / 12.0
+    nebal = balance
+    epsilon = 0.03
+    amou = (monthly_payment_low + monthly_payment_high)/2.0
+    while True:
+        month = 1
+        while month <= 12:
+            nebal = nebal - amou
+            nebal = nebal + (monthly_interest * nebal)
+            month += 1
+        if nebal > 0 and nebal > epsilon:
+            monthly_payment_low = amou
+            nebal = balance
+        elif nebal < 0 and nebal < - epsilon:
+            monthly_payment_high = amou
+            nebal = balance
+        else:
+            return amou
+        amou = (monthly_payment_low + monthly_payment_high)/2.0
 
 
 def main():
@@ -70,7 +85,6 @@ def main():
     # data = "4773 0.2"
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0],data[1]))
-
+    print("Lowest payment: " + str(round(payingdebtoffinayear(data[0], data[1]), 2)))
 if __name__ == "__main__":
     main()

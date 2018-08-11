@@ -20,25 +20,25 @@ def isValidWord(word, hand, wordlist):
     """
     # TO DO ... <-- Remove this comment when you code this function
     for char in hand:
-    	if char in hand:
-    		if word in wordlist:
-    			return True
-    		return False
+        if char in hand:
+            if word in wordlist:
+                return True
+            return False
     
 
 
 def main():
-	word=input()
-	n=int(input())
-	adict={}
-	for i in range(n):
-		data=input()
-		l=data.split()
-		adict[l[0]]=int(l[1])
-	l2=input().split()
-	print(isValidWord(word,adict,l2))
-		
+    word=input()
+    n=int(input())
+    adict={}
+    for i in range(n):
+        data=input()
+        l=data.split()
+        adict[l[0]]=int(l[1])
+    l2=input().split()
+    print(isValidWord(word,adict,l2))
+        
 
 
 if __name__== "__main__":
-	main()
+    main()

@@ -38,7 +38,7 @@ def get_word_score(word, num):
     for index in enumerate(word):
         if word[index] in SCRABBLE_LETTER_VALUES.keys():
             count += SCRABBLE_LETTER_VALUES[word[index]]
-    counnt = len(word)*count
+    count = len(word)*count
     if len(word) == num:
         count = count + 50
     return count

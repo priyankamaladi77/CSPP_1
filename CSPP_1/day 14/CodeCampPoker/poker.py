@@ -88,8 +88,10 @@ def is_onepair(hand):
     sort_list = sorted(sort(hand))
     set_list = set(sort_list)
     if len(sort_list) - len(set_list) == 1:
-        return True
-    return False
+        for index in set_list:
+            if sort_list.count(index) == 2:
+                return index/10
+    return 100
 
 
 def is_twopair(hand):
@@ -117,6 +119,15 @@ def is_fullhouse(hand):
     return False
 
 
+def is_highhand(hand):
+    '''To call highhand'''
+    sort_list = sorted(sort(hand))
+    set_list = set(sort_list)
+    if len(set_list) == 5 and not is_flush(hand):
+        return max(set_list)/100
+    return False
+
+
 def hand_rank(hand):
 
     '''
@@ -139,8 +150,8 @@ def hand_rank(hand):
     '''
     if is_threeof_kind(hand):
         return 3
-    if is_onepair(hand):
-        return 1
+    if is_onepair(hand) != 100:
+        return is_onepair(hand)
     if is_twopair(hand):
         return 2
     if is_fullhouse(hand):
@@ -153,7 +164,7 @@ def hand_rank(hand):
         return 6
     if is_straight(hand):
         return 5
-    return 0
+    return is_highhand(hand)
 
 
     # check for straight, flush and straight flush

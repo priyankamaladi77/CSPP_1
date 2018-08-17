@@ -22,8 +22,8 @@ def similarity(dict1, dict2):
     	if word in dict3:
     		dict2.remove(word)
 
-    freq1 = [dict1.count(word) for word in dict1]
-    freq2 = [dict2.count(word) for word in dict2]
+    freq1 = collections.Counter(dict1)
+    freq2 = collections.Counter(dict2)
 
 
     dict4 = []

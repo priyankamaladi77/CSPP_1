@@ -16,11 +16,11 @@ def similarity(dict1, dict2):
 
     dict3 = load_stopwords("stopwords.txt")
     for word in list(dict1):
-    	if word in dict3:
-    		dict1.remove(word)
+        if word in dict3:
+            dict1.remove(word)
     for word in list(dict2):
-    	if word in dict3:
-    		dict2.remove(word)
+        if word in dict3:
+            dict2.remove(word)
 
     freq1 = collections.Counter(dict1)
     freq2 = collections.Counter(dict2)
@@ -30,14 +30,14 @@ def similarity(dict1, dict2):
     dict5 = []
     dict6 = []
     for word in freq1:
-    	if word in freq2:
-    		dict4.append(freq1[word]*freq2[word])
+        if word in freq2:
+            dict4.append(freq1[word]*freq2[word])
 
     for word in freq1:
-    	dict5.append(freq1[word]**2)
+        dict5.append(freq1[word]**2)
 
     for word in freq2:
-    	dict6.append(freq2[word]**2)
+        dict6.append(freq2[word]**2)
 
     return sum(dict4)/(math.sqrt(sum(dict5))*math.sqrt(sum(dict6)))
 

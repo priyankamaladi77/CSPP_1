@@ -17,7 +17,7 @@ def mult_matrix(mat1, mat2):
         for j in range(0, len(mat2[0]), 1):
             res = 0
             for k in range(0, len(mat2), 1):
-                res[i][j] += int(mat1[i][k])*int(mat2[k][j])
+                res += int(mat1[i][k])*int(mat2[k][j])
             lis2.append(res)
         lis1.append(lis2)
     return lis1

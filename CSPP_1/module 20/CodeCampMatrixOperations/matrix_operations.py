@@ -81,7 +81,7 @@ def main():
     mat1 = read_matrix(matrix1)
     matrix2 = input().split(',')
     mat2 = read_matrix(matrix2)
-    if mat1 ==  None or mat2 ==  None:
+    if mat1 == None or mat2 == None:
         return None
     print(add_matrix(mat1, mat2))
     print(mult_matrix(mat1, mat2))

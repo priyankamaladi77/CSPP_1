@@ -38,9 +38,8 @@ def add_matrix(mat1, mat2):
                 temp += int(mat2[i][j])
                 res[i][j] = temp
         return res
-    else:
-        print("Error: Matrix shapes invalid for addition")
-        return None
+    print("Error: Matrix shapes invalid for addition")
+    return None
 
 
 def read_matrix(size):
@@ -70,8 +69,7 @@ def read_matrix(size):
     if count != ro1*col1:
         print("Error: Invalid input for the matrix")
         return None
-    else:
-        return matrix
+    return matrix
 
 def main():
     ''' to read the functions'''

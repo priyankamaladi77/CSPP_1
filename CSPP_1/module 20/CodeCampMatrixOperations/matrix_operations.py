@@ -27,7 +27,7 @@ def add_matrix(mat1, mat2):
     '''
     res = copy.deepcopy(mat1)
     if len(mat1) == len(mat2):
-        for i in enumerate(mat1):
+        for i in range(len(mat1)):
             for j in range(len(mat1[i])):
                 temp = int(res[i][j])
                 temp += int(mat2[i][j])

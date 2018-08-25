@@ -10,7 +10,7 @@ def tokenize(string):
     for word in frequency:
         dictionary.append(frequency[word]**2)
     return frequency
-            
+
 def main():
     '''tokenize the string and return with frequency to dictionary'''
     dictionary = {}

@@ -11,7 +11,7 @@ def print_dictionary(dictionary):
         dictionary.append(frequency[word]**2)
     return dictionary
     for keys in dictionary:
-    dictionary = append.(sorted.(keys), frequency)
+    dictionary = append.(sorted.(keys))
     return dictionary
 
 def main():
